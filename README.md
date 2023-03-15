@@ -231,7 +231,19 @@ Once in the rds dashboard, lets create "subnet groups" first, so select it and c
 
 
 
-Next create database, select "database" and click "create database". Under "choose a database creation method", select "standard create", under "engine type" choose "mysql", under "version" select the latest myssql 5.7, scroll down under "template" select "dev/test", scroll down, under "db instance identifier" type in the name "dev-rds-db", under "credential settings", type in your username and password and repete the password. scroll down, under "db instance class", select "bustable classes" and the toggle previous instance classes. scroll down, under connectivity(vpc), select the dev vpc, under "subnet group", select the subnet group we just created. scroll down, under "vpc security group" select "choose existing", in the search box delete the default and select "database security group", under "availability zone" select "us-east-1b". scroll down and expand "additional configuration", under database name, type in "applicationdb", scroll all the way down and hit "create database
+Next create database, select "database" and click "create database". Under "choose a database creation method", select "standard create", under "engine type" choose "mysql", under "version" select the latest myssql 5.7, scroll down under "template" select "dev/test", scroll down, under "db instance identifier" type in the name "dev-rds-db", under "credential settings", type in your username and password and repete the password. scroll down, under "db instance class", select "bustable classes" and the toggle previous instance classes. scroll down, under connectivity(vpc), select the dev vpc, under "subnet group", select the subnet group we just created. scroll down, under "vpc security group" select "choose existing", in the search box delete the default and select "database security group", under "availability zone" select "us-east-1b". scroll down and expand "additional configuration", under database name, type in "applicationdb", scroll all the way down and hit "create database". It usually takes some minutes before the rds instance is created.
+
+
+![image](https://user-images.githubusercontent.com/115881685/225460888-592a6bed-ab41-410a-8d0a-1c73a24d59bf.png)
+![image](https://user-images.githubusercontent.com/115881685/225460961-d5f40577-e59b-4794-8f6e-b9a30dfd93e1.png)
+![image](https://user-images.githubusercontent.com/115881685/225461045-5b8ea733-c8df-456c-b423-6e3980d1b693.png)
+![image](https://user-images.githubusercontent.com/115881685/225461166-14821c81-e314-468e-b58f-72918e3e9382.png)
+![image](https://user-images.githubusercontent.com/115881685/225461378-508d031f-af0e-4ac1-b851-a7305f9ad0a3.png)
+![image](https://user-images.githubusercontent.com/115881685/225461557-508fd323-a466-44ba-b350-1b13cf72c52e.png)
+![image](https://user-images.githubusercontent.com/115881685/225461683-b09ec678-4208-480f-a289-3cc173bc36b1.png)
+![image](https://user-images.githubusercontent.com/115881685/225461752-58c61dbf-a0b0-4d8f-a9ea-a9a39ca24284.png)
+![image](https://user-images.githubusercontent.com/115881685/225461877-0e2b9ec4-c004-40f3-acbf-06530334a511.png)
+
 
 
 
