@@ -191,6 +191,49 @@ To create security group, select "security group" in the vpc dashboard, filter b
 
 ![image](https://user-images.githubusercontent.com/115881685/225405267-f7316e3c-db72-440d-8d85-e84352b97bdf.png)
 ![image](https://user-images.githubusercontent.com/115881685/225405482-f0410487-8a7e-4413-b8e9-73b947dbdea9.png)
+![image](https://user-images.githubusercontent.com/115881685/225448688-d5cf17f9-e5f6-43e3-8397-87d1943c4217.png)
+
+
+Next we create SSH Security group, using the security group architecture by follwing the same steps.
+
+![image](https://user-images.githubusercontent.com/115881685/225449342-07cc831a-9f7a-4228-b220-8dc36d104a2f.png)
+![image](https://user-images.githubusercontent.com/115881685/225449697-02b1f566-ec37-4084-9198-21622f9b74fc.png)
+
+Use the same steps in creating the the web server security group, database security group and efs security group using the securerity group reference architecture for guide on the diffrerent ports.
+
+When you are done, filter the security groups by your dev vpc to see the six(6) security groups including the default security group.
+
+![image](https://user-images.githubusercontent.com/115881685/225451348-e9f05f62-f340-4066-9424-443771a02a4b.png)
+
+
+
+The next major component in our over all lamp stack project is creating rds instance in the private data subnets.
+
+
+
+## Create RDS DATABASE
+
+#### RDS database architecture
+
+![5 WordPress_RDS](https://user-images.githubusercontent.com/115881685/225452479-89a0ecc7-1f12-43f7-8405-3aac322110ff.jpg)
+
+
+
+To create rds database in the management console, type "rds" and select rds under services in the search box.
+
+Once in the rds dashboard, lets create "subnet groups" first, so select it and click "create db subnet group". Name it database subnets, use the same name for "description", then select the dev vpc under "vpc", scroll down, under "add subnet", select us-east-1a and us-east-1b, then under "subnets", select the private data subnets with cidr block "10.0.4.0/24 and "10.0.5.0/24 then scroll down and click "create".
+
+
+![image](https://user-images.githubusercontent.com/115881685/225455872-133fceef-7006-4248-9cb8-77ae7f01c10d.png)
+![image](https://user-images.githubusercontent.com/115881685/225456089-4cc6ecec-164f-40a2-a56e-4fa6968aa2b6.png)
+![image](https://user-images.githubusercontent.com/115881685/225456354-10c15e06-b8c3-48ab-9308-98f1cdaa5e01.png)
+![image](https://user-images.githubusercontent.com/115881685/225456541-37add466-d2f8-4189-9691-1c9d25aab3b7.png)
+
+
+
+Next create database, select "database" and click "create database". Under "choose a database creation method", select "standard create", under "engine type" choose "mysql", under "version" select the latest myssql 5.7, scroll down under "template" select "dev/test", scroll down, under "db instance identifier" type in the name "dev-rds-db", under "credential settings", type in your username and password and repete the password. scroll down, under "db instance class", select "bustable classes" and the toggle previous instance classes. scroll down, under connectivity(vpc), select the dev vpc, under "subnet group", select the subnet group we just created. scroll down, under "vpc security group" select "choose existing", in the search box delete the default and select "database security group", under "availability zone" select "us-east-1b". scroll down and expand "additional configuration", under database name, type in "applicationdb", scroll all the way down and hit "create database
+
+
 
 
 
