@@ -247,6 +247,15 @@ Next create database, select "database" and click "create database". Under "choo
 
 
 
+Next piece in our puzzle is to create an Elastic file system(EFS) with mount target in the private data saubnet
+
+## Create EFS
+
+
+
+
+
+
 
 
 
