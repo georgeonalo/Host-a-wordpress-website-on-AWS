@@ -7,6 +7,8 @@ In this project, i showed how to deploy a dynamic website on aws using a lamp st
 
 # Create custom vpc
 To kick off the project, we will build a custom VPC, see vpc reference architecture below
+
+
 ![2 _VPC_Reference_Architecture](https://user-images.githubusercontent.com/115881685/225285355-25409fca-777c-4784-b8de-23e4dcb70191.jpg)
 
 To create the VPC, go to the AWS console a type vpc in the search box and select vpc. In the VPC dashboard, select VPC, then click create VPC.
