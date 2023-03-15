@@ -177,6 +177,25 @@ Next step associate this route table with private app subnet az2 and private dat
 ![image](https://user-images.githubusercontent.com/115881685/225396128-642a2d75-e721-428e-933f-14c7fa96ddd4.png)
 
 
+The next major block of this project is security group.
+
+## Create Security Group
+
+#### security group reference architecture for our project
+
+![4 WordPress_SG](https://user-images.githubusercontent.com/115881685/225399771-2094091e-5512-497b-8193-10771573cd0c.jpg)
+
+
+To create security group, select "security group" in the vpc dashboard, filter by the dev vpc, in there you will see a default security group, click "create security group", name it "alb security group", select our dev vpc under vpc. in "inbound rules", click "add rule". The first rule will be under port 80 which is http, search for it and select it. "source" will be 0.0.0.0/0 which means traffic from anywhere, select it.  The second rule will be https which is on port 443, search for it and select it. Also the "source" will be still be "0.0.0.0/0". scroll down and click "create security group".
+
+
+![image](https://user-images.githubusercontent.com/115881685/225405267-f7316e3c-db72-440d-8d85-e84352b97bdf.png)
+![image](https://user-images.githubusercontent.com/115881685/225405482-f0410487-8a7e-4413-b8e9-73b947dbdea9.png)
+
+
+
+
+
 
 
 
