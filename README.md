@@ -73,6 +73,44 @@ Under "name", call it "public-route-table", under vpc, select our "Dev-vpc", the
 ![image](https://user-images.githubusercontent.com/115881685/225306742-0b7be1cc-7606-4d66-91a3-c5b25f779c11.png)
 
 
+### Next step Add public route to the route table
+The route aalows the public route table to route traffic to the internet.
+
+To do this, make sure you are on the route tab, then click "edit routes", then click "add route", under "destination", type in "0.0.0.0/0" in the box. After that, under "target", select "internet gateway", then click "save changes"
+
+![image](https://user-images.githubusercontent.com/115881685/225329518-05d1b16d-fd84-4578-be76-6189b6b54ef5.png)
+![image](https://user-images.githubusercontent.com/115881685/225329742-4ea562f6-2661-4ccc-be49-e861979caa8a.png)
+![image](https://user-images.githubusercontent.com/115881685/225330142-26489a07-0cb6-491e-9e42-773197630259.png)
+
+### Next step, associate the two public subnet to the route table
+
+To this, select the "subnet association" tab, then click "edit subnet association", once in the next page, select the two subnet that you see and hit "save aasociation".
+
+![image](https://user-images.githubusercontent.com/115881685/225331798-87967bff-4cd3-4cb9-8fb7-e47fa36a7d62.png)
+![image](https://user-images.githubusercontent.com/115881685/225332075-38c30c18-7c55-4f46-8135-003cacf7df4f.png)
+![image](https://user-images.githubusercontent.com/115881685/225332570-0c542af2-1657-46e4-abc7-30d7d674852e.png)
+
+
+### Create private subnet.
+Following our vpc refference architecture, we will create 4 private subnets. to this select "subnets" in the left hand side of your vpc dashboard, click "create subnets". make sure you filter by the Dev vpc created earlier, so that you are only seeing the two public subnets that was previously created.
+
+under "VPC", select our Dev vpc, under "name", type "private app subnet AZ1" select us-east-1 under "availability zone" under "cidr block", type, "10.0.2.0/24", then scroll down and hit create subnet.
+
+![image](https://user-images.githubusercontent.com/115881685/225336899-87c94012-6e9c-495b-9186-e2b8c13b4705.png)
+
+Do the same for the remaining three(3) subnets by following the VPC reference architecture, see screenshots below.
+
+![image](https://user-images.githubusercontent.com/115881685/225337804-b2d5a862-93cf-4564-bec7-2be55bf6586b.png)
+![image](https://user-images.githubusercontent.com/115881685/225338006-eb5f4d33-bc77-4f40-9fe4-47b30b0dc6e7.png)
+![image](https://user-images.githubusercontent.com/115881685/225338298-617b20a0-ff8f-428b-bfed-924548624210.png)
+
+TO see all the subnets(6), filter by the dev vpc.
+
+![image](https://user-images.githubusercontent.com/115881685/225338851-abcf4ab3-9eab-44a0-87e3-dbeb3a2ead74.png)
+
+
+
+
 
 
 
