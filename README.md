@@ -2,11 +2,11 @@
 
 In this project, i showed how to deploy a dynamic website on aws using a lamp stack project reference architecture. AWS services used includes; VPC, Security group, Ec2, Natgateways, RDS, Application Loadbalancer, Route 53, Autoscaling Group, Certificate Manager, EFS and more
 
-# LAMP STACK PROJECT REFERENCE ARCHITECTURE
+# Lamp stack project reference architecture
 ![1 _LAMP_Stack_Project_Reference_Architecture](https://user-images.githubusercontent.com/115881685/225284346-905bb80b-ad99-4b5c-9f28-832aa455dde3.jpg)
 
-# Create CUSTOM VPC
-To kick off the project, i built a custom VPC, see reference architecture below
+# Create custom vpc
+To kick off the project, we will build a custom VPC, see vpc reference architecture below
 ![2 _VPC_Reference_Architecture](https://user-images.githubusercontent.com/115881685/225285355-25409fca-777c-4784-b8de-23e4dcb70191.jpg)
 
 To create the VPC, go to the AWS console a type vpc in the search box and select vpc. In the VPC dashboard, select VPC, then click create VPC.
@@ -107,6 +107,85 @@ Do the same for the remaining three(3) subnets by following the VPC reference ar
 TO see all the subnets(6), filter by the dev vpc.
 
 ![image](https://user-images.githubusercontent.com/115881685/225338851-abcf4ab3-9eab-44a0-87e3-dbeb3a2ead74.png)
+
+Following our overall lamp stack project reference architecture, next step is to create nate gateways.
+
+
+## Create Nat Gatway
+
+### Nat Gateway reference architecture.
+![3 _Nat_Gateway_Reference_Architecture](https://user-images.githubusercontent.com/115881685/225374326-b7a41ca3-8712-451a-bc46-1c26d1d66e7a.jpg)
+
+
+Following the architecture, we are creating two nat gateaways, one in public subnet az1 and the second in public subnet az2.
+To do this, select "natgateway" in the vpc dashboard and click "create nat gateways", give it the name "nat gatway az1", select "public subnet az1" and scroll down, under "elastic ip allocation id", click "allocate elastic ip", scroll down and hit "create nat gateway".
+
+![image](https://user-images.githubusercontent.com/115881685/225372601-b6a479c1-6d66-421a-a35e-1a1e6b4b784e.png)
+![image](https://user-images.githubusercontent.com/115881685/225372921-d2b2c6e9-0596-47c1-9b2d-e1d0e079fb96.png)
+![image](https://user-images.githubusercontent.com/115881685/225373593-2af0442a-c9ae-45f1-bc35-0ede9efc593d.png)
+
+
+
+### Next step create a route table.
+Like before simply select "route table" in the left side of your vpc dashboard and hit "create route table". Give the route table the name, "private route table az1" and then select our "Dev vpc", scroll down and click "create route table".
+
+![image](https://user-images.githubusercontent.com/115881685/225377151-ad9a36dc-45c8-4c5f-98a0-e97f94ecd803.png)
+![image](https://user-images.githubusercontent.com/115881685/225377295-f636c8fb-a960-4da6-bf3c-181e9673a505.png)
+
+
+Next we add route to the the private route table az1 to route traffic to the internet through the nat gateway in the public subnet az1
+
+To this, like before, select the "route" tab and click "edit route", click "add route", under "destination", type "0.0.0.0/0 and click it. under "local" select our nat gateway az1 in the public subnet and hit "save changes".
+
+![image](https://user-images.githubusercontent.com/115881685/225380230-059c6834-010a-4f62-9ccc-81b0cce57714.png)
+![image](https://user-images.githubusercontent.com/115881685/225380436-af00a519-5a53-4be9-a92a-78ff2dd2c774.png)
+
+
+Next associte this route table with "private app subnet az1" and "private data subnet az1" following the nat gateway reference architecture.
+
+Like before select the "subnet associations" tab and then click "edit subnet associations". Under "available subnets", select private app subnet az1 and private data subnet az1 respectively and click "save associations".
+
+
+![image](https://user-images.githubusercontent.com/115881685/225382241-b3f03d95-1928-41aa-aa15-49f54f509916.png)
+![image](https://user-images.githubusercontent.com/115881685/225382429-9e6f4e36-8478-48a1-912f-a152930057f7.png)
+![image](https://user-images.githubusercontent.com/115881685/225382633-47769ae7-b642-4324-bd30-c07cf479f93f.png)
+
+
+Next we create the second nat gateway in the public subnet az2. see screenshots below
+
+![image](https://user-images.githubusercontent.com/115881685/225389066-a8e358d0-270a-4927-9cc1-b4a78015bbbc.png)
+![image](https://user-images.githubusercontent.com/115881685/225390059-71b9088b-51db-47d0-9f39-22c1666696ab.png)
+
+Create another route table and call it private route table az2, see screenshots below.
+
+![image](https://user-images.githubusercontent.com/115881685/225391210-0825109a-9d26-4038-a346-83734b5e80f3.png)
+![image](https://user-images.githubusercontent.com/115881685/225391399-8ba84f7f-6cdb-4b76-b516-0333014baf6e.png)
+
+
+Next step add a route to the private route table az2 to route traffic to the internet through the nat gateway in the public subnet az2.
+Follow the steps we use in creating the previous one.
+
+![image](https://user-images.githubusercontent.com/115881685/225393218-27bf887d-1dc0-4cf4-b01c-0517f05eb33d.png)
+![image](https://user-images.githubusercontent.com/115881685/225393596-38c303e7-29be-4c11-b73f-be64b1de114c.png)
+
+
+Next step associate this route table with private app subnet az2 and private data subnet az2, like before, follow the previous steps.
+
+![image](https://user-images.githubusercontent.com/115881685/225395523-7a667ab4-6a5d-479a-ade1-feaf2e5c08a4.png)
+![image](https://user-images.githubusercontent.com/115881685/225396128-642a2d75-e721-428e-933f-14c7fa96ddd4.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
