@@ -1,4 +1,4 @@
-# Host-a-wordpress-website-on-AWS
+# Host a wordpress website on AWS
 
 In this project, i showed how to deploy a dynamic website on aws using a lamp stack project reference architecture. AWS services used includes; VPC, Security group, Ec2, Natgateways, RDS, Application Loadbalancer, Route 53, Autoscaling Group, Certificate Manager, EFS and more
 
