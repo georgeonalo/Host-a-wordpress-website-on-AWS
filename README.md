@@ -562,8 +562,7 @@ Go to the console and search route 53, select it under services, once in the rou
 Now the record set has been created, to access our website, copy the record name and paste it in your browser press enter.
 
 
-
-![image](https://user-images.githubusercontent.com/115881685/225619577-96695471-815b-456d-a4d8-1d8c13c32bd3.png)
+![image](https://user-images.githubusercontent.com/115881685/225621393-19310c2d-0348-4cc4-90a7-cc06989afc4f.png)
 ![image](https://user-images.githubusercontent.com/115881685/225620075-819977ac-dcca-4a40-89af-f096f89b42c1.png)
 
 
