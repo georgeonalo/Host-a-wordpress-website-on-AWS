@@ -546,7 +546,28 @@ Since we have launched two instances in the private app subnets and can now acce
 
 
 
+## Create a Record Set in Route 53
+Next step is to create a record set in route 53 to access the website with our domain.
 
+Go to the console and search route 53, select it under services, once in the route 53 dashboard, click on "hosted zone" and select your domain, on next page click "create record", under "record name", type in "www" then toggle on the "alias, scroll down and select the drop down, select "alias to application and classic loadbalancer", then select the "us-east-1", next select the drop down and select the application loadbalancer that was created. Then click "create record".
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225618256-e6816b45-2ed8-4990-b4a2-fa3e10f51f86.png)
+![image](https://user-images.githubusercontent.com/115881685/225618394-0ad70fc4-557a-4adb-a806-d81b06d594bc.png)
+![image](https://user-images.githubusercontent.com/115881685/225618618-3c94e027-1d20-4c05-b1d2-b3f5c2ce237c.png)
+
+
+Now the record set has been created, to access our website, copy the record name and paste it in your browser press enter.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225619577-96695471-815b-456d-a4d8-1d8c13c32bd3.png)
+![image](https://user-images.githubusercontent.com/115881685/225620075-819977ac-dcca-4a40-89af-f096f89b42c1.png)
+
+
+We can now access the wordpress site using our domain name.
 
 
 
