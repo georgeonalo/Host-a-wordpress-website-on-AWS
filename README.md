@@ -439,6 +439,11 @@ sudo service httpd restart
 
 this commands helps the ec2 to automatically install all the dependencies it needs without you having to do it manually. once done, "click launch intance".
 
+
+![image](https://user-images.githubusercontent.com/115881685/225567740-49db62f5-961a-4eaa-a733-b3e9b30db526.png)
+
+
+
 Follow the same step to launch the second ec2 instance in the private app subnet az2.
 
 Once done go to your ec2 dashboard to see your instances
@@ -456,7 +461,7 @@ Once done go to your ec2 dashboard to see your instances
 
 
 
-![image](https://user-images.githubusercontent.com/115881685/225567740-49db62f5-961a-4eaa-a733-b3e9b30db526.png)
+
 
 
 
