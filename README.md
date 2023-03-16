@@ -733,6 +733,97 @@ There you go, we can now access our website. This is how you create an autoscali
  
  
 ## Install WordPress Theme and Template
+Finally to complete the project, we are going to install free theme and template to make our website professional.
+
+Login into your website as an admin by appending "/wp-admin to the end of your website url, press enter. Once in, select "apperance" and click on "add new".
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225699444-24035e8f-db13-404e-b80d-8f3511cff631.png)
+
+
+
+
+We are installing the "Astra theme, Click "install" and then "activate"
+
+
+![image](https://user-images.githubusercontent.com/115881685/225700492-fc9f471e-3bcd-448c-97ec-65e97fe0b56e.png)
+![image](https://user-images.githubusercontent.com/115881685/225700976-0063cb56-0f5e-416f-9053-7d130015fd40.png)
+
+
+
+Wait for to finish activating and on the page that displays, click, "build your website now" and select "elementor"
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225702212-1247cc66-b71c-4a61-832a-66688fc8c8da.png)
+![image](https://user-images.githubusercontent.com/115881685/225702381-1bad53bc-f1eb-41fb-9ca6-27602575ae32.png)
+![image](https://user-images.githubusercontent.com/115881685/225702503-e413082a-7c84-4d5e-9665-909842cdd7b4.png)
+
+
+
+In the page that opens, select local business and underneath it, search "love nature" this is where the template i want to install is located, select it.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225704151-b90d9be3-2cf1-493a-9db8-e348d02b0e99.png)
+
+
+
+Click "skip and continue" scroll down and do the same again. In the page that follows, enter your information and click "submit and build my website".
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225704868-a415bad1-b01e-4772-a5e2-3a1425c75b11.png)
+
+
+
+Give it some time to finish building the website, once its done, click "view your website" and you will taken to your website.
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225705479-0d47b19a-c57f-424b-8030-6e2141de9ad2.png)
+
+![image](https://user-images.githubusercontent.com/115881685/225705615-cf68d629-7184-43d4-9c70-cd3cc4bf80b0.png)
+
+
+
+
+Scroll down to see more of the website.
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225705951-c9532cc7-76da-4170-9106-84bd552e3715.png)
+![image](https://user-images.githubusercontent.com/115881685/225706042-5b81fde8-e81b-47a1-8abe-57214447ddde.png)
+![image](https://user-images.githubusercontent.com/115881685/225706092-9466a3ae-0159-42c5-b0bb-3ac6a3313b89.png)
+![image](https://user-images.githubusercontent.com/115881685/225706214-f502799b-c445-4243-bdf1-21ab2eb952e1.png)
+
+
+
+
+
+Finally log out as the admin and try accessing as how users would. Open a new tab, type in your domain name. and press enter.
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225706882-7ae68a7d-8eb3-4b75-99fe-5e0c95def3a4.png)
+
+
+
+
+
+
+And here you have it guy, we are done.
+
+
+Please note, all the resourses created in the course of doing this project has to be deleted in other to avoid been charged.
+
 
 
 
