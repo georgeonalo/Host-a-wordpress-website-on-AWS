@@ -247,9 +247,37 @@ Next create database, select "database" and click "create database". Under "choo
 
 
 
-Next piece in our puzzle is to create an Elastic file system(EFS) with mount target in the private data saubnet
 
 ## Create EFS
+Next piece in our puzzle is to create an Elastic file system(EFS) with mount target in the private data saubnet in each availability zone.
+The EFS will allow the webservers in the private app subnet to pull the application code and configuration files from the same location.
+
+Type EFS in the search box in your console and select EFS under services, click "create file system", then click "customize". Name it "Def-Efs" and scroll down, uncheck the "encryption" box and leave every other thing as default, name the tag, "dev-efs" then click next, under vpc in network, select the "dev vpc", under "availability zone" in mount target, select us-east-1a and us-east-1b respectively, then move to the left, under "security", delete the default security and select the "EFS security group" for both respectively, then click "next" till you get to the create page, click it.
+
+
+![image](https://user-images.githubusercontent.com/115881685/225547984-fb6c22d5-4a3f-44b8-ba81-77d7ab2a72ec.png)
+![image](https://user-images.githubusercontent.com/115881685/225548242-b6552757-891f-413f-9f58-00a696d9ac2c.png)
+![image](https://user-images.githubusercontent.com/115881685/225548351-575256f3-451b-49af-be6a-5bde94ebb851.png)
+![image](https://user-images.githubusercontent.com/115881685/225548454-a3d64638-2412-4112-bfbc-901395748db3.png)
+![image](https://user-images.githubusercontent.com/115881685/225548736-ebe540eb-938a-42be-bfe4-ac994b1ee7d3.png)
+![image](https://user-images.githubusercontent.com/115881685/225548941-10b7e292-bac6-4fa1-bfde-68a1149e6cab.png)
+
+
+
+
+
+## Launch the setup server (Ec2 instance)
+Next step is to launch the ec2 instance that will be used to install wordpress in the public subnet az1. To do that search ec2 in the console and navigate yourself to the ec2 dashboard. select "instances running" and click "launch instance", under "name and tag", call it "setup server", scroll down, select "quick start" tab and choose "amazon linux", scroll down, "under keypair", select your keypair, under "network setting", click "edit" and select our "dev vpc", select "public subnet az1", then under "firewall", select "existing security group" and select the drop down and choose the ssh, alb and webserver security groups. click "launch instance".
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225553445-c8465eca-482d-4961-9e23-3b22c9d59259.png)
+![image](https://user-images.githubusercontent.com/115881685/225553562-700ea842-c89b-4c18-9629-ca9db31931c7.png)
+![image](https://user-images.githubusercontent.com/115881685/225553694-d049cc90-d92f-425f-8d5d-318b0edf6aca.png)
+![image](https://user-images.githubusercontent.com/115881685/225554107-4c97de97-c32c-44b3-9787-fa3436524ec8.png)
+![image](https://user-images.githubusercontent.com/115881685/225554370-64159941-7d7b-43f2-93d7-a21a17e8320d.png)
+
+
 
 
 
