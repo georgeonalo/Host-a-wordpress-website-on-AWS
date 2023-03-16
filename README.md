@@ -595,10 +595,60 @@ To create a free certificate, go to the certificate manager dashboard in the con
 ![image](https://user-images.githubusercontent.com/115881685/225625381-6ed19d1a-97bd-4cc7-a81c-02f43fd2431c.png)
 
 
+![image](https://user-images.githubusercontent.com/115881685/225627483-e9ea68cd-2229-4683-a73b-7006608cc87d.png)
+
+
+
+We have successfully requested for a certificate, the status is pending because it needs to be validated in route 53. To do that click "create a record" in the page and follow the instructions in the screenshots.
 
 
 
 
+![image](https://user-images.githubusercontent.com/115881685/225627634-44d5198c-13d5-4b20-9014-961d668ee4af.png)
+![image](https://user-images.githubusercontent.com/115881685/225627831-5bce3113-e095-4ef6-bfb2-270ff830e4ad.png)
+![image](https://user-images.githubusercontent.com/115881685/225630927-a8737485-0f82-4c1d-8cc7-283215b394f2.png)
+
+
+
+If you now check the status, it has been "issued", and the status of our two name name is now "success"
+
+
+
+
+## Launch Bastion Host
+
+Next step is to ssh into the the instance in the private subnet, but to that we first need to launch an instance in the public subnet, this instance is called bastion host, we will ssh into it, and from there we can now ssh into the instance in the private subnet.
+
+Follow the exact same step as before in launching instance in the public subnet. see screenshots below.
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225631151-391a2c83-dabf-4d9e-9ea5-2eb8fe7c46a9.png)
+![image](https://user-images.githubusercontent.com/115881685/225631308-5c117833-7820-45bf-ae7f-68e76611cbca.png)
+![image](https://user-images.githubusercontent.com/115881685/225631849-1166e86a-d939-4ba5-bf3f-fda1bf5686ab.png)
+
+
+
+Then go to your ec2 dashboard to see all instances.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225632801-4dc2147f-3804-40cf-b8c8-064c5d610ec8.png)
+
+
+
+Copy the ipv4 public address of the bastion host and ssh into it, once that is done, type the command "ssh ec2-user@<private ip>"
+ 
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/115881685/225635644-e21f9514-4133-4bf8-a326-34dd55a59c40.png)
+
+ 
+ 
+ 
+ If you look closely the Ip in our machine corresponds to the private ip of our instance.
 
 
 
