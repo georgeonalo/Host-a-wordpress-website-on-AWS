@@ -812,7 +812,7 @@ Finally log out as the admin and try accessing as how users would. Open a new ta
 
 
 
-![image](https://user-images.githubusercontent.com/115881685/225706882-7ae68a7d-8eb3-4b75-99fe-5e0c95def3a4.png)
+![image](https://user-images.githubusercontent.com/115881685/225707875-cdcb81d7-1a2d-46b7-9181-4ed99f574d83.png)
 
 
 
