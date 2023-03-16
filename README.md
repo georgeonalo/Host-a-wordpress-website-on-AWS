@@ -351,6 +351,35 @@ service httpd restart
 
 
 
+When you are done running all the commands, go and copy the ipv4 public address of the server(ec2) and paste it your browser. Enter it, this will open up the wordpress site in your browser.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225560963-79be5c01-8c0a-42a2-9dcf-c0af4ff7cecc.png)
+
+
+
+Enter your information and click "install wordpress".
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225561308-8a5a5162-244e-4b13-9d42-e6f4b4ee9822.png)
+
+
+
+Click login.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225561539-43edd910-055e-4a04-92aa-ddbf25c43030.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225561827-99973089-597d-42d9-8af6-98bb7c2a1c3a.png)
+
+
+
 
 
 
