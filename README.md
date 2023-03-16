@@ -522,6 +522,25 @@ Once in, click "settings" and the "general", then update the "wordpress address"
 
 
 ![image](https://user-images.githubusercontent.com/115881685/225585399-501d2e5d-5c29-4696-b250-e6d884d7064e.png)
+![image](https://user-images.githubusercontent.com/115881685/225587025-241d31f8-7266-4185-86f6-d30220944fcc.png)
+
+
+
+Once you hit "save changes, you will be prompted to log back in, do that,
+
+
+![image](https://user-images.githubusercontent.com/115881685/225587862-1f752f7b-818f-4777-954f-dfcbe87be0da.png)
+
+
+So we have successfully updated the wordpress domain url.
+
+
+Since we have launched two instances in the private app subnets and can now access the wordpress site with our application balancer dns, We can now go into the console and terminate the initial setup server.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225589273-7f8dfc0b-5470-408e-b497-73e34dfa1ccc.png)
+
 
 
 
