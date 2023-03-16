@@ -458,6 +458,50 @@ Once done go to your ec2 dashboard to see your instances
 
 
 
+### Create target group
+Next step is to create target group and place the two instances in it, this will allow the application loadbalancer to route traffic to the intances.
+
+Select target groups in the left side of the ec2 management console and click create "target group". see screenshots below for instructions.
+
+
+![image](https://user-images.githubusercontent.com/115881685/225576333-7743d14e-b60b-45a0-ab2e-180f0f3bdde0.png)
+![image](https://user-images.githubusercontent.com/115881685/225575828-df05340b-efae-4b9d-9bd0-230b129734d2.png)
+![image](https://user-images.githubusercontent.com/115881685/225576061-5a34adcf-2872-45e7-b045-6de783858209.png)
+![image](https://user-images.githubusercontent.com/115881685/225576714-edea1191-d52d-4b3b-a2bb-58aed88c652c.png)
+
+
+
+
+We can now go on and create the application loadbalancer, see screenshots below for instructions.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225577953-3448d42c-efd9-4b55-8452-331e052a63a3.png)
+![image](https://user-images.githubusercontent.com/115881685/225578179-ac11782e-63fe-4ecc-a34a-71a718a718a8.png)
+![image](https://user-images.githubusercontent.com/115881685/225578484-081ec3f2-aaef-4efc-a90f-28a58ef5af62.png)
+![image](https://user-images.githubusercontent.com/115881685/225578915-fb862d6f-a469-49d3-98c2-91a9c1e2bce4.png)
+![image](https://user-images.githubusercontent.com/115881685/225579182-528e7d85-53b4-40e0-812a-d9f0465a47b4.png)
+![image](https://user-images.githubusercontent.com/115881685/225579387-b8db40a4-11ed-4329-8fe4-577e58d05b15.png)
+ 
+ 
+Then click create loadbalancer.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225580854-e6973063-7da4-472a-9ed2-be336b3cd260.png)
+
+
+
+We have successfully created the loadbalancer, wait for the status to change to active, then copy the the dns of the loadbancer and paste it in your browser, press enter.
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225580987-9ce6e6f9-f6c8-4c56-b6c2-e3ea65a558b6.png)
+
+
+
+We can now acceass our webiste using the dns name of the application loadbalancer.
 
 
 
