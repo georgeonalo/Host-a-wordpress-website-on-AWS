@@ -568,6 +568,37 @@ Now the record set has been created, to access our website, copy the record name
 
 We can now access the wordpress site using our domain name.
 
+Remember any time our domain name changes, we need to go and update the wordpress domain name settings as well, so follow the exact same process as before, if you that, you should have what is shown in the screenshot below, meaning our wordpress website url is now our domain name.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225622607-9aa92d56-f191-4611-b8e2-d23a44445944.png)
+
+
+
+
+
+
+
+
+
+## Register for an SSL Certificate in AWS Certificate Manager
+The certificate manager encrypts all communication between the web browser and our web servers.
+
+To create a free certificate, go to the certificate manager dashboard in the console, and follow the steps in the screenshots below.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225624926-a8d7dcc0-ddc3-46f1-ad79-bf67022a1160.png)
+![image](https://user-images.githubusercontent.com/115881685/225625050-ec772b81-046b-4dc6-b128-305b4ed946c3.png)
+![image](https://user-images.githubusercontent.com/115881685/225625247-4664ac7f-8eef-4b08-8179-8fc02062fb62.png)
+![image](https://user-images.githubusercontent.com/115881685/225625381-6ed19d1a-97bd-4cc7-a81c-02f43fd2431c.png)
+
+
+
+
+
+
 
 
 
