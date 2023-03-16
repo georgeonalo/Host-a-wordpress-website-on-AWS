@@ -639,16 +639,99 @@ Then go to your ec2 dashboard to see all instances.
 
 
 
-Copy the ipv4 public address of the bastion host and ssh into it, once that is done, type the command "ssh ec2-user@<private ip>"
- 
- 
- 
- ![image](https://user-images.githubusercontent.com/115881685/225635644-e21f9514-4133-4bf8-a326-34dd55a59c40.png)
+Copy the ipv4 public address of the bastion host and ssh into it, once that is done, type the command "ssh ec2-user@private ip address of any of the webserver"
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225641188-443fbc16-2a43-4b7a-883f-e979c74298fb.png)
+![image](https://user-images.githubusercontent.com/115881685/225635644-e21f9514-4133-4bf8-a326-34dd55a59c40.png)
 
  
  
  
- If you look closely the Ip in our machine corresponds to the private ip of our instance.
+ If you look closely the Ip in our machine corresponds to the private ip of our webserver instance, this shows we have successfully sshed into the instance in the private subnet.
+ 
+ 
+ 
+ 
+ 
+ ## Create an Auto Scaling Group
+ 
+ We need to create an autoscaling group to dynamically create and scale the webservers in the private app subnets.
+ 
+ Before creating the autoscaling groups first terminate the two web servers that where manually created.
+ 
+ 
+ 
+ 
+ 
+Now go ahead, Follow the steps in the screenshots below, first we will create launch template.
+The launch template contains configuration about our instance that autoscaling group will use to launch new instances.
+
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225643311-54ddb472-556e-4391-bb06-2033d37a81c0.png)
+![image](https://user-images.githubusercontent.com/115881685/225644299-6577d092-e95e-4acc-846e-e9fca6a9c622.png)![image](https://user-images.githubusercontent.com/115881685/225644525-3b22df67-c652-4265-bb65-42206942f76c.png)
+![image](https://user-images.githubusercontent.com/115881685/225644799-d547e310-be92-439d-aa23-512123c5a65f.png)
+
+
+
+
+Expand the advance details tab and scroll down to the user data box, paste in the earlier command we use in configuring our ec2, ensure you update the efs mount information, then click "create launch template".
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225646308-3d0ea517-897a-4fab-91d6-2ab235d89de7.png)
+
+
+Now go ahead and create our autoscaling group, follow the screenshots below.
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225646762-c799ddd5-5e2c-4f79-93cc-01ecb897f33e.png)
+![image](https://user-images.githubusercontent.com/115881685/225646962-554c6591-9901-4025-adbc-bdace4164a2a.png)
+![image](https://user-images.githubusercontent.com/115881685/225647149-fc377b11-eb47-4736-87af-5355595b3646.png)
+![image](https://user-images.githubusercontent.com/115881685/225647941-6cdc619b-fbdb-4c9e-9568-30e764850679.png)
+![image](https://user-images.githubusercontent.com/115881685/225648143-eaa00795-4a6d-4215-af0c-070a82a14bd5.png)
+![image](https://user-images.githubusercontent.com/115881685/225648301-9e4334e4-b9c7-4d3f-a36d-31d6d3d8234e.png)
+![image](https://user-images.githubusercontent.com/115881685/225648588-2f364f9e-77cf-4ae0-be43-00198dc3e31d.png)
+![image](https://user-images.githubusercontent.com/115881685/225648873-f5d665fd-9240-40ee-a112-1d32f9fee0e4.png)
+![image](https://user-images.githubusercontent.com/115881685/225649073-c6babd13-c36e-481c-842d-03b074253bb5.png)
+![image](https://user-images.githubusercontent.com/115881685/225649326-172d9019-0ac9-4ac7-9d0f-d6cd36b6e79d.png)
+
+
+
+
+
+Now go to the ec2 dashboard to see the two new instances created by our autoscaling group.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225651438-3af01ce0-5b86-4ded-86a0-a4211600d99b.png)
+
+
+
+To still access our website, type in your domain name in a browser and enter
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225651656-698a78bc-56b8-42f7-beca-6d0e68c7084e.png)
+
+
+
+
+There you go, we can now access our website. This is how you create an autoscaling group to dynamically create and scale ec2 instances in the private app subnets.
+
+
+ 
+ 
+ 
+ 
 
 
 
