@@ -395,7 +395,69 @@ Enter your login details.
 There you have it, we have successfully install the wordpress site and moved the files to efs.
 
 
-Next step is to create application load balancer to route traffic to the ec2 instances in the private app subnets
+## Create Application Loadbalancer
+Next step is to create application load balancer to route traffic to the ec2 instances in the private app subnets following our reference architecture.
+
+Before creating the application loadbalancer, first launch ec2 instances in each of the private app subnets. Follow the steps as before in creating instance.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225566552-16a3a9f1-b4b8-4277-aa9d-0a44f1c1e899.png)
+![image](https://user-images.githubusercontent.com/115881685/225566771-5199f205-8507-46af-95ad-84ee74449221.png)
+![image](https://user-images.githubusercontent.com/115881685/225566895-9a7d0476-339d-4314-a8a2-fa8fac1638fd.png)
+
+
+
+Scroll down and expand "advance details", then scroll down to "user data", in the box, paste the command below, this is the same command used in installing wordpress, ensure you update the efs mount information.
+
+
+
+```
+#!/bin/bash
+yum update -y
+sudo yum install -y httpd httpd-tools mod_ssl
+sudo systemctl enable httpd 
+sudo systemctl start httpd
+sudo amazon-linux-extras enable php7.4
+sudo yum clean metadata
+sudo yum install php php-common php-pear -y
+sudo yum install php-{cgi,curl,mbstring,gd,mysqlnd,gettext,json,xml,fpm,intl,zip} -y
+sudo rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+sudo yum install mysql-community-server -y
+sudo systemctl enable mysqld
+sudo systemctl start mysqld
+echo "fs-03c9b3354880b36a6.efs.us-east-1.amazonaws.com:/ /var/www/html nfs4 nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 0 0" >> /etc/fstab
+mount -a
+chown apache:apache -R /var/www/html
+sudo service httpd restart
+```
+
+
+
+
+
+this commands helps the ec2 to automatically install all the dependencies it needs without you having to do it manually. once done, "click launch intance".
+
+Follow the same step to launch the second ec2 instance in the private app subnet az2.
+
+Once done go to your ec2 dashboard to see your instances
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225570488-9a55e742-b4eb-475f-8bd9-ee3d7c41147a.png)
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225568313-431ab382-58d6-4663-9b4e-84dfba8efcb1.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225567740-49db62f5-961a-4eaa-a733-b3e9b30db526.png)
+
 
 
 
