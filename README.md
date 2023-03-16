@@ -732,6 +732,8 @@ There you go, we can now access our website. This is how you create an autoscali
  
  
  
+## Install WordPress Theme and Template
+
 
 
 
