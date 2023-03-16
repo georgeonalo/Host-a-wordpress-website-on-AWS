@@ -503,6 +503,27 @@ We have successfully created the loadbalancer, wait for the status to change to 
 
 We can now acceass our webiste using the dns name of the application loadbalancer.
 
+Any time you change your domain address, you need to go into your wordpress domain settings and do likewise. To do this first copy your domain name
+
+
+![image](https://user-images.githubusercontent.com/115881685/225583320-2ef82208-9cf2-4083-83e3-c413b803b382.png)
+
+
+
+Then add /wp-admin to the end, press enter, this will prompt you to login, enter your details and you will be taking to the wordpress dashboard.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225584137-ee6037b0-7c2c-457a-9276-dec723958357.png)
+
+
+
+Once in, click "settings" and the "general", then update the "wordpress address" and "site address" with the address you copied earlier, ensure to remove the forward slash at the end.
+
+
+![image](https://user-images.githubusercontent.com/115881685/225585399-501d2e5d-5c29-4696-b250-e6d884d7064e.png)
+
+
 
 
 
