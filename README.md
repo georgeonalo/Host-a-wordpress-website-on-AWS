@@ -367,7 +367,6 @@ Enter your information and click "install wordpress".
 
 
 
-Click login.
 
 
 
@@ -375,10 +374,28 @@ Click login.
 
 
 
+Click login.
+
 
 ![image](https://user-images.githubusercontent.com/115881685/225561827-99973089-597d-42d9-8af6-98bb7c2a1c3a.png)
 
 
+
+Enter your login details.
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/225562489-8aac755b-0444-46cc-b870-a4259b08922a.png)
+
+
+
+
+
+There you have it, we have successfully install the wordpress site and moved the files to efs.
+
+
+Next step is to create application load balancer to route traffic to the ec2 instances in the private app subnets
 
 
 
