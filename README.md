@@ -1,6 +1,6 @@
 # Host a wordpress website on AWS
 
-In this project, i showed how to deploy a dynamic website on aws using a lamp stack project reference architecture. AWS services used includes; VPC, Security group, Ec2, Natgateways, RDS, Application Loadbalancer, Route 53, Autoscaling Group, Certificate Manager, EFS and more
+In this project, i showed how to deploy a dynamic website on aws using a lamp stack project reference architecture. AWS services used includes; VPC, Security group, Ec2, Nat gateways, RDS, Application Loadbalancer, Route 53, Autoscaling Group, Certificate Manager, EFS and more
 
 # Lamp stack project reference architecture
 ![1 _LAMP_Stack_Project_Reference_Architecture](https://user-images.githubusercontent.com/115881685/225284346-905bb80b-ad99-4b5c-9f28-832aa455dde3.jpg)
@@ -819,7 +819,7 @@ Finally log out as the admin and try accessing as how users would. Open a new ta
 
 
 
-And here you have it guy, we are done.
+And here you have it guys, we are done.
 
 
 Please note, all the resourses created in the course of doing this project has to be deleted in other to avoid been charged.
