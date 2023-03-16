@@ -435,12 +435,15 @@ sudo service httpd restart
 
 
 
+![image](https://user-images.githubusercontent.com/115881685/225567740-49db62f5-961a-4eaa-a733-b3e9b30db526.png)
+
 
 
 this commands helps the ec2 to automatically install all the dependencies it needs without you having to do it manually. once done, "click launch intance".
 
 
-![image](https://user-images.githubusercontent.com/115881685/225567740-49db62f5-961a-4eaa-a733-b3e9b30db526.png)
+
+![image](https://user-images.githubusercontent.com/115881685/225568313-431ab382-58d6-4663-9b4e-84dfba8efcb1.png)
 
 
 
@@ -456,7 +459,7 @@ Once done go to your ec2 dashboard to see your instances
 
 
 
-![image](https://user-images.githubusercontent.com/115881685/225568313-431ab382-58d6-4663-9b4e-84dfba8efcb1.png)
+
 
 
 
