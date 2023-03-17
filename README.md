@@ -20,7 +20,8 @@ Name the VPC "Dev VPC". In the IPv4 cidr block space, type "10.0.0.0/16". Leave 
 
 ![image](https://user-images.githubusercontent.com/115881685/225289405-5f49df39-ef2e-4fbc-b1bc-1f88f8385f59.png)
 
-Next step is to eneble DNS hostname in the vpc, to do that, select "action" and then edit "vpc setting". In the next page that opens, check the enable "DNS hostname" box and scroll down and hit save button.
+#### Next step is to eneble DNS hostname in the vpc
+To do that, select "action" and then edit "vpc setting". In the next page that opens, check the enable "DNS hostname" box and scroll down and hit save button.
 
 ![image](https://user-images.githubusercontent.com/115881685/225291345-c31135a1-fa3a-4846-9bac-3a3e72cf1ff7.png)
 ![image](https://user-images.githubusercontent.com/115881685/225291408-914debf2-26c2-4844-b03a-d971f6255a57.png)
