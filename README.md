@@ -6,7 +6,9 @@ In this project, i showed how to deploy a dynamic website on aws using a lamp st
 ![1 _LAMP_Stack_Project_Reference_Architecture](https://user-images.githubusercontent.com/115881685/225284346-905bb80b-ad99-4b5c-9f28-832aa455dde3.jpg)
 
 # Create custom vpc
-To kick off the project, we will build a custom VPC, see vpc reference architecture below
+To kick off the project, we will build a custom VPC, see vpc reference architecture below which is three(3) tiered.
+
+In a 3 tier vpc reference architecture, the infrastructure is divided into 3 tiers, the first tier contains a public subnet which holds a nat gateway, bastion host and loadbalancer. In the second tier, we have a private subnet which hold the webservers(ec2 instances), the third tier contains a private subnet, which holds the data base. All this subnets are replicated accross multiple availability zones to provide high avalaibilty and fault tolerence. Then finally we will create an internet gateway and route table, this will provide resourses in the vpc with internet access.
 
 
 ![2 _VPC_Reference_Architecture](https://user-images.githubusercontent.com/115881685/225285355-25409fca-777c-4784-b8de-23e4dcb70191.jpg)
