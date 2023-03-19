@@ -5,11 +5,13 @@ In this project, i showed how to deploy a dynamic website on aws using a lamp st
 # Lamp stack project reference architecture
 ![1 _LAMP_Stack_Project_Reference_Architecture](https://user-images.githubusercontent.com/115881685/225284346-905bb80b-ad99-4b5c-9f28-832aa455dde3.jpg)
 
-# Create custom vpc
-To kick off the project, we will build a custom VPC, see vpc reference architecture below which is three(3) tiered.
+# Create VPC with Public and Private Subnets
+To kick off the project, we will build a custom VPC, see vpc reference architecture below which is three(3) tiered enabled.
 
 In a 3 tier vpc reference architecture, the infrastructure is divided into 3 tiers, the first tier contains a public subnet which holds a nat gateway, bastion host and loadbalancer. In the second tier, we have a private subnet which hold the webservers(ec2 instances), the third tier contains a private subnet, which holds the data base. All this subnets are replicated accross multiple availability zones to provide high avalaibilty and fault tolerence. Then finally we will create an internet gateway and route table, this will provide resourses in the vpc with internet access.
 
+
+### VPC Reference Architecture
 
 ![2 _VPC_Reference_Architecture](https://user-images.githubusercontent.com/115881685/225285355-25409fca-777c-4784-b8de-23e4dcb70191.jpg)
 
@@ -116,7 +118,7 @@ TO see all the subnets(6), filter by the dev vpc.
 Following our overall lamp stack project reference architecture, next step is to create nate gateways.
 
 
-## Create Nat Gatway
+## Create NAT Gateways in the Public Subnets
 
 ### Nat Gateway reference architecture.
 ![3 _Nat_Gateway_Reference_Architecture](https://user-images.githubusercontent.com/115881685/225374326-b7a41ca3-8712-451a-bc46-1c26d1d66e7a.jpg)
@@ -615,6 +617,49 @@ We have successfully requested for a certificate, the status is pending because 
 
 If you now check the status, it has been "issued", and the status of our two name name is now "success"
 
+
+
+## Create a HTTPS Listener
+Next we will use the ssl certificate to secure all communication with our website by creating https listener in loadbalancer dashboard.
+
+Follow the instructions in the screenshots.
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/226197176-b284a3c0-ae59-4406-9c0e-09a49e07dccc.png)
+
+![image](https://user-images.githubusercontent.com/115881685/226197301-315f31f3-e5dc-457d-a34c-50fb9ccfc560.png)
+
+![image](https://user-images.githubusercontent.com/115881685/226197376-bdf4ee55-3030-4105-abdc-7e5261732dfa.png)
+
+![image](https://user-images.githubusercontent.com/115881685/226197705-0b2fb689-0f90-46f7-bf0f-ab94da3a732d.png)
+
+
+
+The HTTPS listener has been created, next thing is to modify our HTTP Listener to redirect traffic to HTTPS. See screenshots below for instruction.
+
+
+![image](https://user-images.githubusercontent.com/115881685/226197947-5794ff97-7bbc-485b-adca-3103ac22165f.png)
+
+![image](https://user-images.githubusercontent.com/115881685/226198051-62a8e5b9-7b15-42b4-b37e-2d323e998574.png)
+
+![image](https://user-images.githubusercontent.com/115881685/226198081-d6da80d9-1b16-4e28-8672-1dd605a16c3b.png)
+
+
+
+
+
+Now you can check to see if you can access the website. Go to your browser and type in your domain name starting with "https//www.domain name".
+
+
+
+
+![image](https://user-images.githubusercontent.com/115881685/226214476-791b8d08-0403-443e-9d4b-daab4a357a7d.png)
+
+
+
+
+Yes, not only can we access the website, it now has the lock symbol which means all communication between our website and web browser is now secured. What we just did is also called "security in transit".
 
 
 
